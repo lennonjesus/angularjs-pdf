@@ -211,7 +211,7 @@ export const NgPdf = ($window, $document, $log) => {
             $log.log('pdfUrl value change detected: ', scope.pdfUrl);
           }
           url = newVal;
-          scope.pageNum = scope.pageToDisplay = pageToDisplay;
+          scope.pageNum = scope.pageToDisplay;
           if (pdfLoaderTask) {
             pdfLoaderTask.destroy().then(() => {
               renderPDF();
